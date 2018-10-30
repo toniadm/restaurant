@@ -3,7 +3,7 @@
  */
 
 #footer {
-	display: flex;
+
 }
 
 /*
@@ -11,6 +11,9 @@
  */
 
 #restaurants-list .restaurant-img {
-	display: flex;
-	min-width: 100%;
+
+}
+
+.filter-options {
+
 }
