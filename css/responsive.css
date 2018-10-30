@@ -1,0 +1,15 @@
+/*
+ * Footer
+ */
+
+#footer {
+	display: flex;
+}
+
+/*
+ * Restaurant Images
+ */
+
+#restaurants-list {
+	display: flex;
+}
