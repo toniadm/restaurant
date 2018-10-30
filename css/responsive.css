@@ -10,6 +10,7 @@
  * Restaurant Images
  */
 
-#restaurants-list {
+#restaurants-list .restaurant-img {
 	display: flex;
+	min-width: 100%;
 }
