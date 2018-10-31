@@ -133,8 +133,9 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   display: flex;
-  flex-flow: wrap;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
@@ -149,9 +150,7 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  max-width: 470px;
-  width: 80%;
-  flex: 1 33%;
+  max-width: 270px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
