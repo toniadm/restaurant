@@ -109,6 +109,7 @@ nav h1 a {
   height: 100%;
   background-color: #3397DB;
   align-items: center;
+  padding: 10px 0;
 }
 .filter-options h2 {
   color: white;
@@ -132,7 +133,7 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
   align-items: center;
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -150,6 +151,7 @@ nav h1 a {
   text-align: left;
   max-width: 470px;
   width: 80%;
+  flex: 1 33%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -209,7 +211,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -268,7 +270,7 @@ nav h1 a {
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
-  position: relative;
+  /*position: relative;*/
   width: 85%;
 }
 #reviews-list li p {
