@@ -1,5 +1,5 @@
-/**
- * Display service worker registration
+/*
+ * Display service worker urls to be cached
  */
 
 const cachedUrls = [
@@ -25,6 +25,10 @@ const cachedUrls = [
 
 ];
 
+/*
+ * Setup install handler
+ */
+
 self.addEventListener('install', function (evt) {
 	evt.waitUntil(
 		 caches.open('v1').then(function(cache) {
@@ -32,6 +36,10 @@ self.addEventListener('install', function (evt) {
 		 })
 	);
 });
+
+/*
+ * Setup fetch handler
+ */
 
 self.addEventListener('fetch', function (evt) {
     evt.respondWith(
