@@ -44,7 +44,22 @@ self.addEventListener('install', function (evt) {
 self.addEventListener('fetch', function (evt) {
     evt.respondWith(
         caches.match(evt.request).then(function (response) {
-            return response || fetch(evt.request);
-        })
-    );
+        if (response) {
+          return response;
+        }
+        else {
+          return fetch(evt.request)
+          .then(function(response) {
+          	const clonedResponse = response.clone();
+          	caches.open('v1').then(function(cache) {
+          		cache.put(evt.request, clonedResponse);
+          	})
+          	return response;
+          })
+          .catch(function(error) {
+          	console.error(error);
+         });
+      }
+  	})
+  );
 });
